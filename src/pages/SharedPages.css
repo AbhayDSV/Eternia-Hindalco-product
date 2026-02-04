@@ -1,0 +1,388 @@
+/* Shared CSS for all operational pages */
+/* Import this in each page's CSS file: @import './SharedPages.css'; */
+
+/* Common Page Styles */
+.approvals-page,
+.ranking-page,
+.forecasting-page,
+.inventory-page,
+.shipments-page,
+.invoices-page,
+.integrations-page,
+.notifications-page,
+.master-data-page,
+.users-page {
+    padding: 2rem;
+    animation: fadeIn 0.3s ease-in;
+}
+
+.page-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.page-header h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--text-dark);
+    margin: 0 0 0.5rem 0;
+}
+
+.page-header .subtitle {
+    color: var(--text-muted);
+    font-size: 1rem;
+    margin: 0;
+}
+
+.header-actions,
+.header-stats {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+/* Stats Pills */
+.stat-pill {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1rem;
+    background: #FFF3E0;
+    color: #F57C00;
+    border-radius: 20px;
+    font-size: 0.875rem;
+    font-weight: 600;
+}
+
+.stat-pill.approved {
+    background: #E8F5E9;
+    color: #388E3C;
+}
+
+/* Tabs */
+.approval-tabs,
+.ranking-tabs,
+.forecast-tabs,
+.inventory-tabs,
+.invoice-tabs,
+.notification-tabs,
+.master-data-tabs {
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+    border-bottom: 2px solid #f0f0f0;
+}
+
+.tab {
+    padding: 0.75rem 1.5rem;
+    background: transparent;
+    border: none;
+    border-bottom: 3px solid transparent;
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: var(--text-muted);
+    cursor: pointer;
+    transition: all 0.2s ease;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.tab:hover:not(.active) {
+    color: var(--text-dark);
+    background: #f8f9fa;
+}
+
+.tab.active {
+    color: var(--primary-blue);
+    border-bottom-color: var(--primary-blue);
+    background: transparent;
+}
+
+/* Cards */
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+.card-header h3 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--text-dark);
+    margin: 0;
+}
+
+/* Tables */
+.table-container {
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+thead {
+    background: #f8f9fa;
+}
+
+th {
+    text-align: left;
+    padding: 1rem;
+    font-weight: 600;
+    color: var(--text-dark);
+    font-size: 0.875rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    border-bottom: 2px solid #e0e0e0;
+}
+
+td {
+    padding: 1rem;
+    border-bottom: 1px solid #f0f0f0;
+    color: var(--text-body);
+}
+
+tbody tr {
+    transition: background-color 0.2s ease;
+}
+
+tbody tr:hover {
+    background-color: #f8f9fa;
+}
+
+/* Status Badges */
+.status-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.25rem;
+    padding: 0.375rem 0.875rem;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.status-badge.in-transit {
+    background: #E3F2FD;
+    color: #1976D2;
+}
+
+.status-badge.delivered {
+    background: #E8F5E9;
+    color: #388E3C;
+}
+
+.status-badge.pending {
+    background: #FFF3E0;
+    color: #F57C00;
+}
+
+.status-badge.sent {
+    background: #E8F5E9;
+    color: #388E3C;
+}
+
+.status-badge.failed {
+    background: #FFEBEE;
+    color: #C62828;
+}
+
+.status-badge.success {
+    background: #E8F5E9;
+    color: #388E3C;
+}
+
+.status-badge.active {
+    background: #E8F5E9;
+    color: #388E3C;
+}
+
+.status-badge.inactive {
+    background: #ECEFF1;
+    color: #546E7A;
+}
+
+.status-badge.archived {
+    background: #F5F5F5;
+    color: #757575;
+}
+
+.status-badge.overdue {
+    background: #FFEBEE;
+    color: #C62828;
+}
+
+.status-badge.paid {
+    background: #E8F5E9;
+    color: #388E3C;
+}
+
+/* Buttons */
+.btn-action-small {
+    padding: 0.375rem 0.75rem;
+    background: var(--primary-blue);
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.btn-action-small:hover {
+    background: #1E88E5;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(41, 182, 246, 0.3);
+}
+
+.btn-icon-small {
+    padding: 0.375rem;
+    background: #f8f9fa;
+    border: 1px solid #e0e0e0;
+    border-radius: 6px;
+    color: var(--text-dark);
+    cursor: pointer;
+    transition: all 0.2s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn-icon-small:hover {
+    background: var(--primary-blue);
+    color: white;
+    border-color: var(--primary-blue);
+}
+
+/* Filters */
+.filters {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.filter-select {
+    padding: 0.5rem 1rem;
+    background: white;
+    border: 1px solid #e0e0e0;
+    border-radius: 6px;
+    font-size: 0.875rem;
+    color: var(--text-dark);
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.filter-select:hover {
+    border-color: #bdbdbd;
+}
+
+.filter-select:focus {
+    outline: none;
+    border-color: var(--primary-blue);
+}
+
+.search-input {
+    padding: 0.5rem 1rem;
+    background: white;
+    border: 1px solid #e0e0e0;
+    border-radius: 6px;
+    font-size: 0.875rem;
+    color: var(--text-dark);
+    min-width: 250px;
+}
+
+.search-input:focus {
+    outline: none;
+    border-color: var(--primary-blue);
+}
+
+/* Empty State */
+.empty-state {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 4rem 2rem;
+    color: var(--text-muted);
+}
+
+.empty-state svg {
+    margin-bottom: 1rem;
+    opacity: 0.5;
+}
+
+.empty-state h3 {
+    margin: 0 0 0.5rem 0;
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--text-dark);
+}
+
+.empty-state p {
+    margin: 0;
+    font-size: 1rem;
+}
+
+/* Utilities */
+.text-red {
+    color: #EF5350;
+}
+
+/* Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+
+    .approvals-page,
+    .ranking-page,
+    .forecasting-page,
+    .inventory-page,
+    .shipments-page,
+    .invoices-page,
+    .integrations-page,
+    .notifications-page,
+    .master-data-page,
+    .users-page {
+        padding: 1rem;
+    }
+
+    .page-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+    }
+
+    .header-actions,
+    .header-stats {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .filters {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .filter-select,
+    .search-input {
+        width: 100%;
+    }
+}
