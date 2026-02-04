@@ -1,3 +1,6 @@
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
 /* ===================================
    ETERNIA Design System
    A Hindalco Product - Order Management Platform
@@ -96,9 +99,6 @@ body {
   line-height: 1.6;
   overflow-x: hidden;
 }
-
-/* Import Google Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
 
 /* ===================================
    Typography
@@ -381,11 +381,12 @@ a:hover {
   gap: 0.5rem;
 
   cursor: pointer;
-  transition: 
+  transition:
     transform 0.25s ease,
     box-shadow 0.25s ease,
     filter 0.25s ease;
 }
+
 /* 
 .btn-primary:hover:not(:disabled) {
   box-shadow: 0 6px 20px rgba(41, 182, 246, 0.45);
